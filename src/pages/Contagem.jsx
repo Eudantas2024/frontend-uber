@@ -84,7 +84,7 @@ function Contagem() {
                         <th>Manual</th>
                         <th>Uber</th>
                         <th>99</th>
-                        <th>Número</th>
+                        <th>Total dia</th>
                     </tr>
                 </thead>
                 <tbody>
