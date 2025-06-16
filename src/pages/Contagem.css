@@ -1,10 +1,11 @@
 /* Contagem.css */
 
 .container {
-  max-width: 800px;
+  max-width: 500px;
   margin: 20px auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
   font-family: Arial, sans-serif;
+  font-size: 0.7rem;
   text-align: center;
 }
 
