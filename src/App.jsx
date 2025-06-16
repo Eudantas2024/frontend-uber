@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Home, Contagem } from "./pages"; // importa das páginas via index.js na pasta pages
+import Home from "./pages/Home";
+import Contagem from "./pages/Contagem";
+
 
 function App() {
   return (
