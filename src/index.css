@@ -24,11 +24,12 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding-top: 3rem; /* ou 0, se quiser colado na barra */
+  display: block; /* remove centralização */
   min-width: 320px;
   min-height: 100vh;
 }
+
 
 h1 {
   font-size: 3.2em;
