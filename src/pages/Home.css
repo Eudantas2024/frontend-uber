@@ -12,6 +12,7 @@ width: 100%;
   justify-content: center; /* horizontal */
   align-items: flex-start; /* topo vertical */
   padding-top: 4px; /* ajuste a distância do topo aqui */
+  padding-left: 15px;
   box-sizing: border-box;
   flex-direction: column;
   gap: 20px;
