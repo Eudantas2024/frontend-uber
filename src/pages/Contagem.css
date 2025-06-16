@@ -1,0 +1,49 @@
+/* Contagem.css */
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+button {
+  margin-bottom: 1rem;
+  background: #c00;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

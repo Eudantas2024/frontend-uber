@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import API_URL from "../services/api";
+import "./Contagem.css"; // ✅ Importação do CSS separado
 
 function Contagem() {
     const [registros, setRegistros] = useState([]);
@@ -47,7 +48,6 @@ function Contagem() {
         }
     }
 
-
     const somaTotal = registros.reduce((acc, r) => acc + (r.numero || 0), 0);
 
     if (loading) return <p>Carregando...</p>;
@@ -60,23 +60,11 @@ function Contagem() {
             <button
                 onClick={excluirSelecionados}
                 disabled={selecionados.length === 0}
-                style={{
-                    marginBottom: "1rem",
-                    background: "#c00",
-                    color: "#fff",
-                    padding: "8px",
-                    border: "none",
-                    cursor: "pointer",
-                }}
             >
                 Excluir Selecionados
             </button>
 
-            <table
-                border="1"
-                cellPadding="8"
-                style={{ borderCollapse: "collapse", width: "100%" }}
-            >
+            <table>
                 <thead>
                     <tr>
                         <th></th>
@@ -111,19 +99,13 @@ function Contagem() {
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colSpan="5">
-                            <strong>Total</strong>
-                        </td>
-                        <td>
-                            <strong>{somaTotal}</strong>
-                        </td>
+                        <td colSpan="5">Total</td>
+                        <td>{somaTotal}</td>
                     </tr>
                 </tfoot>
             </table>
 
-            <Link to="/" style={{ display: "inline-block", marginTop: "20px" }}>
-                ← Voltar para o formulário
-            </Link>
+            <Link to="/">← Voltar para o formulário</Link>
         </div>
     );
 }
