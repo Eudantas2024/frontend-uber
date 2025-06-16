@@ -1,5 +1,7 @@
+//src/App.jsx
 import { useState } from 'react';
 import './App.css';
+import API_URL from './services/api'; // ✅ importe a variável de ambiente
 
 function App() {
   const [numero, setNumero] = useState("");
@@ -20,7 +22,8 @@ function App() {
     };
 
     try {
-      const res = await fetch("http://localhost:3000/api/registros", {
+      const res = await fetch(`${API_URL}/registros`, {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(registro),
