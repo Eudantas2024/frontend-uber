@@ -100,7 +100,7 @@ function Contagem() {
                 <tfoot>
                     <tr>
                         <td colSpan="5">Total</td>
-                        <td>{somaTotal}</td>
+                        <td>{somaTotal.toFixed(2)}</td>  {/* Aqui */}
                     </tr>
                 </tfoot>
             </table>
