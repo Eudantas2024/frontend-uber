@@ -1,7 +1,6 @@
-//src/App.jsx
 import { useState } from 'react';
 import './App.css';
-import API_URL from './services/api'; // ✅ importe a variável de ambiente
+import API_URL from './services/api'; // ✅ variável de ambiente
 
 function App() {
   const [numero, setNumero] = useState("");
@@ -17,13 +16,11 @@ function App() {
 
     const registro = {
       numero: Number(numero),
-      // Envia a data só se estiver preenchida, senão omite
       ...(data && { data }),
     };
 
     try {
       const res = await fetch(`${API_URL}/registros`, {
-
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(registro),
@@ -38,17 +35,17 @@ function App() {
       const resposta = await res.json();
       alert("Registro salvo com sucesso!");
       setNumero("");
-      setData(""); // limpa campo data após envio
+      setData("");
     } catch (error) {
       alert("Erro ao salvar registro: " + error.message);
     }
   }
 
   return (
-    <div style={{ padding: "20px", maxWidth: "400px", margin: "auto" }}>
+    <div className="container">
       <h1>Contador</h1>
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>
             Número (obrigatório): <br />
             <input
@@ -56,24 +53,24 @@ function App() {
               value={numero}
               onChange={(e) => setNumero(e.target.value)}
               required
-              style={{ width: "100%", padding: "8px" }}
+              className="input-field"
             />
           </label>
         </div>
 
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>
             Data (opcional): <br />
             <input
               type="date"
               value={data}
               onChange={(e) => setData(e.target.value)}
-              style={{ width: "100%", padding: "8px" }}
+              className="input-field"
             />
           </label>
         </div>
 
-        <button type="submit" style={{ padding: "10px 20px" }}>
+        <button type="submit" className="btn-submit">
           Enviar
         </button>
       </form>

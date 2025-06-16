@@ -44,6 +44,7 @@
 .container {
   max-width: 400px;
   margin: 2rem auto;
+  background-color: #6ed2a2;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -67,5 +68,27 @@ button {
   color: white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.container {
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.btn-submit {
+  padding: 10px 20px;
   cursor: pointer;
 }
