@@ -48,3 +48,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* linha clara */
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #a9cba0; /* linha um pouco menos clara */
+}
