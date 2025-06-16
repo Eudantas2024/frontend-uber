@@ -54,5 +54,5 @@ table tbody tr:nth-child(odd) {
 }
 
 table tbody tr:nth-child(even) {
-  background-color: #a9cba0; /* linha um pouco menos clara */
+  background-color: #c3ecb8; /* linha um pouco menos clara */
 }
